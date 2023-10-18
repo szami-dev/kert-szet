@@ -60,6 +60,8 @@ body {
 }
 #contBg {
   background-color: #EBE9D9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
 }
 .navBar-o {
   width: 1150px; 
@@ -74,3 +76,11 @@ body {
 }
 
 /*FOOTER*/
+
+#buttonVelemeny {
+  background-color: #448132;
+}
+
+#buttonVelemeny:hover{
+  background-color: #618855;
+}
