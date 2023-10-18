@@ -7,103 +7,106 @@
     <link rel="stylesheet" href="style.css">
     <script src="bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body id="bodygenyo">
     <!-- Fejléc -->
-    <div class="fejlec p-2 mt-1 container-fluid" >
+    <div class="fejlec p-2 mt-1 container-fluid" style="padding-bottom: 20px; padding-top: 0; margin-top: 0;">
         <div style="padding-top: 20px; padding-bottom: 20px; display: flex; flex-direction: row;" class="container"> 
             <div id="kozep" >
-                <section id="logo" class="fejlecSec"><img src="Images/logo-color.png" alt=""> </section>
-                <section class="fejlecSec"><input type="button" value="Belépés" class="ButtonDesign"></section>
-                <section class="fejlecSec"><input type="button" value="Regisztráció" class="ButtonDesign"></section>
-                <section class="fejlecSec"><input type="text" name="kereses" id="kereses" value="Keresés" class="ButtonDesign"></section>
-                <section class="fejlecSec"><input type="button" value="Kosár" class="ButtonDesign"></section>
+                <img src="Images/logo-color.png" alt="Logo" width="me-auto" height="90" class="d-inline-block">
+                
+                    </div>
+                <!--<section class="fejlecSec"><input type="button" value="Belépés" class="btn btn-warning"></section>
+                <section class="fejlecSec"><input type="button" value="Regisztráció" class="btn btn-warning"> </section>
+                <section class="fejlecSec"><input type="text" name="kereses" id="kereses" placeholder="Keresés" class="form-control"> </section>
+                <section class="fejlecSec"><input type="button" value="Kosár" class="btn btn-warning"></section>-->
             </div>
+            
            
         </div>
         
     </div>
 
-    <!-- Navigáció -->
-    <nav class="navbar navbar-expand-lg">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#helyszinek">Világörökségeink</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-dark fw-bold" href="#terkep">Elhelyezkedésük</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#varolista">Várólista</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#forrasok">Források</a>
-            </li>
-        </ul>
-
-    </nav>
+    
+    
+        
 
 
 
 
 
-    <div class="container h-100">
+    <div class="container h-100" id="contBg" >
+        <!-- Navigáció -->
+        <div class="navBar-o">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-radius: 0; margin: 0 auto;">
+                <div class="container-fluid" class="ContClass">
+                  <a class="navbar-brand" href="#">FŐOLDAL</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"> <span style="font-weight: bold;">Ajándékutalvány</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Szolgáltatásaink</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Rólunk</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Kontakt</a>
+                      </li>
+                      
+                      
+                    </ul>
+                    
+                  </div>
+                </div>
+              </nav></div>
 
         
 
         <!--Slideshow-->
-            <h2>Kiemelt ajánlataink</h2>
-            
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_snow_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" style="height: 400px;">
+              <div class="item active">
+                <img src="Images/grass_field_plant_90207_1280x720.jpg" alt="Los Angeles">
+              </div>
+          
+              <div class="item">
+                <img src="Images/grass_flower_summer_84352_1280x720.jpg" alt="Chicago">
+              </div>
+          
+              <div class="item">
+                <img src="Images/pond_beautiful_bushes_90468_1280x720.jpg" alt="New York">
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
 
 
 
@@ -113,11 +116,14 @@ function showSlides() {
 
         <!-- Bevezető -->
         <section id="bevezeto">
-            <h1>A UNESCO Világörökség Programjáról</h1>
-            <p>A <span style="font-weight: bold;">UNESCO</span> (azaz Egyesült Nemzetek Szervezetének Nevelésügyi, Tudományos és Kulturális Szervezete) Világörökség Programját 1972-ben alapították. A program célja, hogy az emberiség kulturális és természeti örökségét nyilvántartásba vegye – így
-                az országoknak, amelyek erre a listára kerülnek, vállalniuk kell, hogy megóvják a területükön lévő világörökségi helyszíneket, hogy aztán a későbbi generációk is élvezhessék azok páratlan szépségét. Mondanunk sem kell, hogy a világörökségi
-                listára rákerülni hatalmas presztízsértékkel bír – olyan helyek szerepelnek itt, mint például a Grand Canyon Nemzeti Park, Firenze történelmi központja, a Machu Picchu vagy a kínai nagy fal. Ennek a magasztos felsorolásnak a része immár
-                nyolc természeti és kulturális érték Magyarországon is; a FŐVÁROSBAN a DUNA-PART LÁTKÉPE a BUDAI VÁRNEGYEDDEL és az Andrássy úttal számít a Világörökség részének.</p>
+            <h1>Üdvözöljük weboldalunkon!</h1>
+            <p>A <span style="font-weight: bold;">Forest Garden kft.</span> elkötelezett a zöldítés és a fenntartható növénytermesztés területén. Célunk, hogy megalkossuk és fenntartsuk a természetes környezetet, miközben ösztönözzük ügyfeleinket, hogy élvezzék a természet szépségét saját otthonuk kényelméből.</p>
+
+                <p>Mi hiszünk abban, hogy minden kert és park egy egyedi ökoszisztéma, amelyet gondos odafigyeléssel kell kezelni. Széleskörű szakértelemmel rendelkező csapatunk segítségével célunk, hogy minden ügyfelünk számára egyedi megoldásokat kínáljunk, melyek fenntarthatóak és hosszú távon megőrzik a természeti egyensúlyt.</p>
+                
+                <p>Szolgáltatásaink között szerepelnek a kerttervezés és kertfenntartás, a természetes és fenntartható növénytermesztési megoldások, valamint az ökológiai rendszerek karbantartása és fejlesztése. Minden munkánk során hangsúlyt fektetünk az innovációra és az olyan környezetbarát módszerek alkalmazására, amelyek hozzájárulnak a biodiverzitás megőrzéséhez és az élhetőbb környezet létrehozásához.</p>
+                
+                <p>Köszönjük, hogy ellátogattak weboldalunkra. Amennyiben bármilyen kérdése lenne, kérjük, ne habozzon felvenni velünk a kapcsolatot. A Forest Garden Kft. örömmel áll rendelkezésére, hogy segítsen Önnek megteremteni az álmai kertjét.</p>
         </section>
 
         <!-- Helyszínek -->
@@ -128,7 +134,7 @@ function showSlides() {
             <div class="row">
                 <h2 class="mt-2">Elhelyezkedésük</h2>
                 <div class="col-12 col-md-8">
-                    <img src="terkep.png" alt="terkep" title="Térkép" class="img-fluid float-start">
+                    <img src="Images/pennisetum_plant_fluff_1021702_3000x2000.jpg" alt="terkep" title="Térkép" class="img-fluid float-start">
 
                 </div>
 
@@ -174,19 +180,89 @@ function showSlides() {
         </section>
 
         <!-- Források -->
-        <section id="forrasok">
-            <h2 class="mt-3">Források</h2>
-            <p>
-                <a href="https://hu.wikipedia.org/wiki/Magyarorsz%C3%A1g_vil%C3%A1g%C3%B6r%C3%B6ks%C3%A9gi_helysz%C3%ADnei
-                " target="_blank">wikipedia
-                </a>
-                <br>
-                <a href="https://csodasmagyarorszag.hu/kategoria/unesco-vilagoroksegi-helyszinek-magyarorszagon" target="_blank">csodasmagyarorszag</a>
-                <br>
-                <a href="https://impressmagazin.hu/a-vilagorokseg-magyar-helyszinei/" target="_blank">impressmagazin</a>
-
-            </p>
-        </section>
+        <!-- Lábléc -->
+   
     </div>
-</body>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+<div style="padding-top: 60px;">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #4D7E3E"
+            >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Forest Garden kft.
+              </h6>
+              <p>
+                Célunk megtalálni az Önnek legmegfelelőbb szolgáltatásainkat, kifinomult informatikai rendszerünkkel és szakértőinkkel. Ha minket választ, jól választ!
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Szolgáltatások</h6>
+              <p>
+                <a class="text-white">Árokásás</a>
+              </p>
+              <p>
+                <a class="text-white">Faültetés</a>
+              </p>
+              <p>
+                <a class="text-white">Fűnyírás</a>
+              </p>
+              <p>
+                <a class="text-white">Kertépítés/tervezés</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Kapcsolat</h6>
+              <p><i class="fas fa-home mr-3"></i> Irbány, Óvoda út 17.</p>
+              <p><i class="fas fa-envelope mr-3"></i> forest.garden@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 36 55 395 0511</p>
+              <p><i class="fas fa-print mr-3"></i> + 36 30 625 4025</p>
+            </div>
+            <!-- Grid column -->
+  
+            
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        © 2023 Copyright:
+        <a class="text-white" href="https://forestgarden.hu/"
+           >forestgarden.hu</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
 </html>
