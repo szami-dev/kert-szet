@@ -66,13 +66,14 @@ body {
 .navBar-o {
   width: 1150px; 
   margin: auto;
+  padding-bottom: 20px;
   
 }
 .ContClass {
   margin: 0 auto; 
   margin-top: 10px;
-  background-color: #448132;
-  padding-bottom: 50px;
+  background-color: #181a17;
+  
 }
 
 /*FOOTER*/
