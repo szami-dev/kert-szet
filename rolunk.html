@@ -7,43 +7,95 @@
     <link rel="stylesheet" href="style.css">
     <script src="bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
-<body>
+<body id="bodygenyo">
     <!-- Fejléc -->
-    <div class="fejlec p-2 mt-1 container-fluid" >
+    <div class="fejlec p-2 mt-1 container-fluid" style="padding-bottom: 20px; padding-top: 0; margin-top: 0;">
         <div style="padding-top: 20px; padding-bottom: 20px; display: flex; flex-direction: row;" class="container"> 
             <div id="kozep" >
-                <section id="logo" class="fejlecSec"><a href="index.html"><img src="Images/logo-color.png" alt=""></a> </section>
-                <section class="fejlecSec"><input type="button" value="Belépés" class="ButtonDesign"></section>
-                <section class="fejlecSec"><input type="button" value="Regisztráció" class="ButtonDesign"></section>
-                <section class="fejlecSec"><input type="text" name="kereses" id="kereses" value="Keresés" class="ButtonDesign"></section>
-                <section class="fejlecSec"><input type="button" value="Kosár" class="ButtonDesign"></section>
+                <img src="Images/logo-color.png" alt="Logo" width="me-auto" height="90" class="d-inline-block">
+                
+                    </div>
+                
             </div>
+            
            
         </div>
         
     </div>
 
-    <!-- Navigáció -->
-    <nav class="navbar navbar-expand-lg">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#helyszinek">Világörökségeink</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-dark fw-bold" href="#terkep">Elhelyezkedésük</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#varolista">Várólista</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark fw-bold" href="#forrasok">Források</a>
-            </li>
-        </ul>
+    <div class="container h-200" id="contBg" >
+        <!-- Navigáció -->
+        <div class="navBar-o container-fluid">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-radius: 0; margin: 0 auto;">
+                <div class="container-fluid" class="ContClass">
+                  <a class="navbar-brand" href="index.html">FŐOLDAL</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ajandek.html"> <span style="font-weight: bold;">Ajándékutalvány</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="szolgaltatasok.html">Szolgáltatásaink</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="rolunk.html">Rólunk</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontakt</a>
+                      </li>
+                      
+                      
+                    </ul>
+                    
+                  </div>
+                </div>
+              </nav></div>
 
-    </nav>
-
-
+        <!--Slideshow-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+          
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" style="height: 400px;">
+              <div class="item active">
+                <img src="Images/grass_field_plant_90207_1280x720.jpg" alt="Los Angeles">
+              </div>
+          
+              <div class="item">
+                <img src="Images/grass_flower_summer_84352_1280x720.jpg" alt="Chicago">
+              </div>
+          
+              <div class="item">
+                <img src="Images/pond_beautiful_bushes_90468_1280x720.jpg" alt="New York">
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
 
 
 
@@ -51,25 +103,23 @@
 
 
         <!-- Rólunk -->
-        <section id="bevezeto">
+        <section id="bevezeto" class="container-fluid"> 
+                <h1>Rólunk</h1>
+                <p> Cégünk 1994-ben kezdett Kecskeméten 2000m2 vágott és cserepes virág, valamint kötészeti kellékek nagykereskedésével és forgalmazásával foglalkozni. 1996 óta Szigetszentmiklóson a Flora Hungária Virágpiacon Holland vágott virág importálására szakosodva, folyamatos, heti kétszer szállít egész évben saját kamionokkal friss vágott virágot a vásárlok részére. Az eltelt idő alatt kialakítottuk a kereskedők részére a kiváló minőségű beszerzési forrásokat és a ma már nélkülözhetetlen versenyképes piaci árakat.</p>
+                <p>Nem titkolt célunk, a megszerzett tapasztalatok alapján, a kereskedők kiváló minőségű virágokkal való ellátása és kiszolgálása! Hogy hol talál meg minket? Szigetszentmiklóson a Flora Hungárián az ország legnagyobb virágpiacán, a nagykereskedelmi csarnokrész a 4-5 standján. Állunk rendelkezésére hétfőn, szerdán, csütörtökön, és szombaton. Folyamatos új virágfajtákkal és akciókkal, kedvezménnyel várjuk Önt is.</p>
+                <p>Ha felkeltettük az érdeklődését, kérem keressen meg minket, kollégám kellő áruismerettel áll rendelkezésére.</p>
 
-            <h1>Rólunk</h1>
-            <p> Cégünk 1994-ben kezdett Kecskeméten 2000m2 vágott és cserepes virág, valamint kötészeti kellékek nagykereskedésével és forgalmazásával foglalkozni. 1996 óta Szigetszentmiklóson a Flora Hungária Virágpiacon Holland vágott virág importálására szakosodva, folyamatos, heti kétszer szállít egész évben saját kamionokkal friss vágott virágot a vásárlok részére. Az eltelt idő alatt kialakítottuk a kereskedők részére a kiváló minőségű beszerzési forrásokat és a ma már nélkülözhetetlen versenyképes piaci árakat.</p>
-            <p>Nem titkolt célunk, a megszerzett tapasztalatok alapján, a kereskedők kiváló minőségű virágokkal való ellátása és kiszolgálása! Hogy hol talál meg minket? Szigetszentmiklóson a Flora Hungárián az ország legnagyobb virágpiacán, a nagykereskedelmi csarnokrész a 4-5 standján. Állunk rendelkezésére hétfőn, szerdán, csütörtökön, és szombaton. Folyamatos új virágfajtákkal és akciókkal, kedvezménnyel várjuk Önt is.</p>
-            <p>Ha felkeltettük az érdeklődését, kérem keressen meg minket, kollégám kellő áruismerettel áll rendelkezésére.</p>
-            <p></p>
         </section>
 
 
         <!-- Kertészet -->
         <section>
-            <div class="row">
+            <div class="row" style="margin: 0 auto; text-align: unset; background-color: #f5f3e9; height: 500px;">  
                 <h2 class="mt-2"></h2>
                 <div class="col-12 col-md-8">
-                    <img src="Images/kertkep.jpg" alt="Kertészetünk" title="Kertészetünk" style="height: 460px; width: 800px;">
+                    <img src="Images/kertkep.jpg" alt="Kertészetünk" title="Kertészetünk" style="height: 460px; width: 700px;">
 
                 </div>
-
                 <div class="col-12 col-md-4">
                     <p>
                         Magyarország nyolc természeti és kulturális értéke került fel eddig az UNESCO Világörökségi listára. Az UNESCO 1972-ben hozta létre a Világörökségi programját, melynek célja az emberiség kulturális és természeti örökségének nyilvántartásba vétele (Világörökségi Lista). A programban részt vevő állam kötelezettséget vállal arra, hogy a területén fekvő világörökségi helyszíneket óvja és megőrzi a későbbi generációk számára.
@@ -91,8 +141,9 @@
 
         <!-- Várólista -->
         <section id="varolista">
-            <h2>Várólistán szereplő helyszínek</h2>
-            <div class="row">
+            
+            <div class="row" style="margin: 0 auto; text-align: unset; background-color: #f5f3e9; height: 500px;">
+                <h2>Várólistán szereplő helyszínek</h2>
                 <p>A Világörökség Magyar Nemzeti Bizottsága dönt arról, hogy a hozzá beérkezett javaslatok alapján mely helyszíneket tartja esélyesnek és érdemesnek egy valamikori felvételre a világörökségi listára. A következő helyszínek szerepelnek az
                     úgynevezett Magyar Várományosi Listán:</p>
                 <ul>
@@ -105,21 +156,132 @@
                     <li>Tájházhálózat Magyarországon (Kulturális) – később átsorolhatják a „Szellemi örökség” (intangible heritage) Egyezmény körébe</li>
                     <li>A Tihanyi-félsziget, a Tapolcai-medence tanúhegyei és a Hévízi-tó – a helyszín lehatárolása és kategóriája 2003-tól megváltozott, mivel két, közeli helyszínt csatoltak hozzá sorozatnevezésként</li>
                     <li>Az északkeleti Kárpát-medence fatemplomai (Kulturális) szlovák-magyar</li>
-                    <li>A „Dunakanyar-kultúrtáj” (munkacím) (Kulturális – kultúrtáj) – a Visegrádi középkori királyi központ és vadászterület, illetve Esztergom középkori vára korábbi két várományosi helyszín összevonásával</li>
+                    <li>A „Dunakanyar-kultúrtáj” (munkacím) (Kulturális – kultúrtáj) – a Visegrádi középkori királyi központ és vadászterület, illetve Esztergom középkori vára <br> korábbi két várományosi helyszín összevonásával</li>
                     <li>A római limes magyarországi szakaszai (Kulturális) – nemzetközi sorozatjelölés részeként</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Kapcsolatok -->
-        <section id="forrasok">
-            <h2 class="mt-3">Kapcsolatok</h2>
-            <p>
-                <p><img src="Images/tel-phone-icon.png" alt="Telefone" style="height: 17px;">Tel.: +36 55 395 051</p>                
-                <p><img src="Images/mail.png" alt="Email" style="height: 17px;"><a href="mailto:forest.garden@gmail.com" style="text-decoration: none; color: black;">forest.garden@gmail.com</a></p>
-                <p><img src="Images/map+marker+pin+icon.png" alt="" style="height: 17px;">Ibrány, Óvoda u. 17, 4484</p>
-            </p>
-        </section>
     </div>
-</body>
-</html>
+    <!--MODALS-->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Új üzetet</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <form>
+                <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Tárgy:</label>
+                <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                <label for="message-text" class="col-form-label">Üzenet:</label>
+                <textarea class="form-control" id="message-text" placeholder="üzenet"></textarea>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezárás</button>
+            <button type="button" class="btn btn-primary" onclick="myFunction() " id="gomb">Küldés</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Lábléc -->
+            <!-- Díjaink -->
+            <section id="varolista">
+            
+                <div class="row" style="padding-top: 80px; margin-left: 0; margin-right: 0; padding-bottom: 80px;">
+                  <iframe src="hirlevel.html" width="800" height="600"></iframe>
+                </div>
+            </section>
+    
+            <!-- Források -->
+            <!-- Lábléc -->
+       
+        </div>
+        <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div style="padding-top: 60px;">
+        <!-- Footer -->
+        <footer
+                class="text-center text-lg-start text-white"
+                style="background-color: #4D7E3E"
+                >
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">
+                    Forest Garden kft.
+                  </h6>
+                  <p>
+                    Célunk megtalálni az Önnek legmegfelelőbb szolgáltatásainkat, kifinomult informatikai rendszerünkkel és szakértőinkkel. Ha minket választ, jól választ!
+                  </p>
+                </div>
+                <!-- Grid column -->
+      
+                <hr class="w-100 clearfix d-md-none" />
+      
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Szolgáltatások</h6>
+                  <p>
+                    <a class="text-white">Árokásás</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Faültetés</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Fűnyírás</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Kertépítés/tervezés</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+      
+                <hr class="w-100 clearfix d-md-none" />
+      
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+      
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Kapcsolat</h6>
+                  <p><i class="fas fa-home mr-3"></i> Irbány, Óvoda út 17.</p>
+                  <p><i class="fas fa-envelope mr-3"></i> forest.garden@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> + 36 55 395 0511</p>
+                  <p><i class="fas fa-print mr-3"></i> + 36 30 625 4025</p>
+                </div>
+                <!-- Grid column -->
+      
+                
+              </div>
+              <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div
+               class="text-center p-3"
+               style="background-color: rgba(0, 0, 0, 0.2)"
+               >
+            © 2023 Copyright:
+            <a class="text-white" href="https://forestgarden.hu/"
+               >forestgarden.hu</a
+              >
+          </div>
+          <!-- Copyright -->
+        </footer>
